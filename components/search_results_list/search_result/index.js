@@ -47,7 +47,7 @@ function SearchResult (props) {
   }
 
   return (
-    <Card className={classes.root} onClick={() => console.log('me cliquearon')}>
+    <Card className={classes.root}>
       <CardHeader
         avatar={
           <Avatar aria-label={jobInfo.organizations[0].name} className={classes.avatar} src={jobInfo.organizations[0].picture} />

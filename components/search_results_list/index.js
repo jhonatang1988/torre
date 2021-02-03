@@ -24,9 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SearchResultList (props) {
   const classes = useStyles()
-  console.log(props.results)
   const jobs = props.results.results
-  console.log(jobs)
 
   if (props.results.exists && !jobs) {
     return (
