@@ -13,6 +13,7 @@ import fillTestSearches from '../../lib/torre/fill_test_searches'
 import getUpdates from '../../lib/torre/get_updates'
 import SearchResultList from '../../components/search_results_list'
 import Container from '@material-ui/core/Container'
+import Box from '@material-ui/core/Box'
 
 export default function SearchPage () {
   const classes = useStyles()
@@ -69,15 +70,23 @@ export default function SearchPage () {
                     </Grid>
                   </Grid>
                 ))}
-                <Button variant='outlined' color='primary' onClick={() => fillTestSearches(value)}>
-                Reload Search Tests
-                </Button>
+                <Box mt={5}>
+                  <Button variant='outlined' color='primary' onClick={() => fillTestSearches(value)}>
+                  Reload Search Tests
+                  </Button>
+                  <div>
+                    <p>Instructions: When you hit RELOAD SEARCH TESTS Button, Database will be filled with 6 searchs from torre's api, but only with old results</p>
+                    <p />
+                    <p>After 5 seconds, it will reload and get updates, so the counter will show new results from that search.</p>
+                    <p>You can activate of deactivate notification, or new jobs emails</p>
+                  </div>
+                </Box>
               </>
             )}
           </Grid>
           <Grid item xs={8}>
             {error && <strong>Error: {JSON.stringify(error)}</strong>}
-            {loading && <span>Cargando Resultados de Busqueda</span>}
+            {loading && <span>Loading Search Results</span>}
             {results && (
               <SearchResultList results={results} />
             )}

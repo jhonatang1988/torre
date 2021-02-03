@@ -28,7 +28,7 @@ function SearchResultList (props) {
 
   if (props.results.exists && !jobs) {
     return (
-      <p>selecciona una busqueda reciente</p>
+      <p>Select any recent search from the sidebar</p>
     )
   } else {
     return (
