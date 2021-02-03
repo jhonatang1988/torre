@@ -6,6 +6,9 @@ const useStyles = makeStyles({
   },
   disableNotifications: {
     color: '#383b4080'
+  },
+  noUpates: {
+    color: 'white'
   }
 })
 

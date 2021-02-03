@@ -1,8 +1,12 @@
 import { Link } from '@material-ui/core'
+import { searchRecent } from '../../../../lib/torre/search'
 
 function SearchLink (props) {
+  function handleShowRecentSearchResults () {
+    searchRecent(props.data)
+  }
   return (
-    <Link color='primary' variant='inherit' href={props.link}>{props.text}</Link>
+    <Link component='button' color='primary' variant='inherit' onClick={handleShowRecentSearchResults}>{props.text}</Link>
   )
 }
 
